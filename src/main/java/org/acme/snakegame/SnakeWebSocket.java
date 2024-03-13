@@ -4,7 +4,6 @@ package org.acme.snakegame;
 import io.quarkus.logging.Log;
 import io.vertx.core.json.JsonObject;
 import jakarta.enterprise.context.ApplicationScoped;
-import jakarta.inject.Inject;
 import jakarta.websocket.OnClose;
 import jakarta.websocket.OnError;
 import jakarta.websocket.OnMessage;
@@ -25,7 +24,6 @@ public class SnakeWebSocket {
 
     private static boolean initialized = false;
 
-    private static int nbPlayers = 0;
 
     @OnOpen
     public void onOpen(Session session, @PathParam("username") String username) {
@@ -38,11 +36,10 @@ public class SnakeWebSocket {
         } else {
             if(!initialized){
                 // Launch the game engine on another thread
-                Thread gameThread = new Thread(() -> SnakeGameEngine.initGame());
+                Thread gameThread = new Thread(SnakeGameEngine::initGame);
                 gameThread.start();
                 initialized = true;
             }
-            nbPlayers++;
             SnakeGameEngine.addPlayer(username);
             broadcast(new JsonObject().put("message", username + " joined the game"));
             Log.info("User " + username + " is connected");
@@ -57,7 +54,6 @@ public class SnakeWebSocket {
             Log.info("User " + username + " is disconnected");
             sessions.remove(username);
             SnakeGameEngine.removePlayer(SnakeGameEngine.getPlayerByUsername(username));
-            nbPlayers--;
         }
     }
 
@@ -77,6 +73,18 @@ public class SnakeWebSocket {
             if(SnakeGameEngine.getPlayerByUsername(username) != null){
                 SnakeGameEngine.getPlayerByUsername(username).changeVelocities(messageJson);
             }
+        } else if(messageJson.getString("action").equals("restart")){
+            // Recreates an instance of a snake for the player
+            if(SnakeGameEngine.getPlayerByUsername(username) == null){
+                SnakeGameEngine.addPlayer(username);
+            } else {
+                try {
+                    session.getBasicRemote().sendText(new JsonObject().put("action", "error").put("message", "This name is already taken").toString());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
     }
 
@@ -93,5 +101,25 @@ public class SnakeWebSocket {
                 e.printStackTrace();
             }
         });
+    }
+
+    // Method to broadcast to a single client
+    public static void broadcastToUsername(String username, JsonObject message){
+        try {
+            if(sessions.get(username) != null && sessions.get(username).isOpen()){
+                sessions.get(username).getBasicRemote().sendText(message.toString());
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Method to disconnect a client by its username
+    public static void disconnectByUsername(String username){
+        try {
+            sessions.get(username).close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

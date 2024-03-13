@@ -13,16 +13,22 @@ public class Snake {
     private int score;
     private int[][] body;
 
+    private boolean alive;
+
     public Snake(int x, int y, String username){
         this.x = x;
         this.y = y;
-        this.velX = 0;
-        this.velY = 0;
         this.username = username;
         this.score = 0;
         this.body = new int[100][2];
-        this.body[0][0] = x;
-        this.body[0][1] = y-1;
+        this.alive = true;
+        // Choose the direction based on the distance to the center of the board
+        if(x < 40){
+            this.velX = 1;
+        } else {
+            this.velX = -1;
+        }
+
     }
 
     public int getX() {
@@ -78,7 +84,7 @@ public class Snake {
     }
 
     public void changeVelocities(JsonObject json){
-        Log.info("Changing velocities of " + this.username + " to " + json.getString("direction"));
+        //Log.info("Changing velocities of " + this.username + " to " + json.getString("direction"));
         if(json.getString("direction").equals("up")){
             this.velX = 0;
             this.velY = 1;
@@ -95,38 +101,39 @@ public class Snake {
     }
 
     public void addScore(int score){
+        // Add a new element to the body of the player
+        this.body[this.score][0] = this.x;
+        this.body[this.score][1] = this.y;
         // Add score to the player
         this.score += score;
-        // Add a new cell to the player's body in the direction of the last cell
-        for(int i = 0; i < this.body.length; i++){
-            if(this.body[i][0] == -1 && this.body[i][1] == -1){
-                this.body[i][0] = this.body[i-1][0];
-                this.body[i][1] = this.body[i-1][1];
-                break;
-            }
-        }
 
     }
 
     public void move(){
-        // Move the player
+        // Move the player's head
         this.x += this.velX;
         this.y += this.velY;
-        // Move the player's body
-        for(int i = 0; i < this.body.length; i++){
-            if(this.body[i][0] != -1 && this.body[i][1] != -1){
-                if(i == 0){
-                    this.body[i][0] = this.x;
-                    this.body[i][1] = this.y;
-                } else {
-                    int tempX = this.body[i][0];
-                    int tempY = this.body[i][1];
-                    this.body[i][0] = this.body[i-1][0];
-                    this.body[i][1] = this.body[i-1][1];
-                    this.body[i-1][0] = tempX;
-                    this.body[i-1][1] = tempY;
-                }
+        // Move the player's body (the first element of the body is taking the previous position of the head and so on)
+        for(int i = this.score; i >= 0; i--){
+            if(i == 0){
+                this.body[i][0] = this.x - this.velX;
+                this.body[i][1] = this.y - this.velY;
+                break;
             }
+            this.body[i][0] = this.body[i-1][0];
+            this.body[i][1] = this.body[i-1][1];
         }
+
+
     }
+
+    public boolean isAlive() {
+        return this.alive;
+    }
+
+    public void kill() {
+        this.alive = false;
+    }
+
+
 }
