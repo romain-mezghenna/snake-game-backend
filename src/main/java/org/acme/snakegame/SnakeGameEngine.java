@@ -147,7 +147,7 @@ public class SnakeGameEngine {
                 for (Snake player : players) {
                     SnakeWebSocket.broadcastToUsername(player.getUsername(), message);
                 }
-                Thread.sleep(300);
+                Thread.sleep(250);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
