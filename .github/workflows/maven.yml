@@ -49,4 +49,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push
-        run: docker build --platform linux/amd64 -f src/main/docker/Dockerfile.jvm -t quarkus/code-with-quarkus-jvm .
+        run: docker build --platform linux/amd64 -f src/main/docker/Dockerfile.jvm .
