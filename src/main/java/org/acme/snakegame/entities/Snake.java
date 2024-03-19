@@ -22,13 +22,8 @@ public class Snake {
         this.score = 0;
         this.body = new int[100][2];
         this.alive = true;
-        // Choose the direction based on the distance to the center of the board
-        if(x < 40){
-            this.velX = 1;
-        } else {
-            this.velX = -1;
-        }
-
+        this.velX = 0;
+        this.velY = 0;
     }
 
     public int getX() {
