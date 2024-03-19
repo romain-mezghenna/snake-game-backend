@@ -57,9 +57,9 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build docker image
-      run: docker build --platform linux/amd64 -f src/main/docker/Dockerfile.jvm quarkus/code-with-quarkus-jvm  .
+      run: docker build --platform linux/amd64 -f src/main/docker/Dockerfile.jvm .
     - name: Tag docker image
-      run: docker tag quarkus/code-with-quarkus-jvm ${{ secrets.DOCKER_USERNAME }}/code-with-quarkus-jvm
+      run: docker tag src/main/docker/Dockerfile.jvm ${{ secrets.DOCKER_USERNAME }}/snake-backend:v1.01
     - name: Push docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/code-with-quarkus-jvm
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/snake-backend:v1.01
 
