@@ -49,9 +49,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: ./src/main/docker/Dockerfile.jvm
-          platforms: linux/amd64
-          push: true
-          tags: user/app:latest
+        run: docker build --platform linux/amd64 -f src/main/docker/Dockerfile.jvm -t quarkus/code-with-quarkus-jvm .
