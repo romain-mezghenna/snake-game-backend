@@ -41,7 +41,6 @@ public class SnakeWebSocket {
                 initialized = true;
             }
             SnakeGameEngine.addPlayer(username);
-            broadcast(new JsonObject().put("message", username + " joined the game"));
             Log.info("User " + username + " is connected");
             sessions.put(username, session);
         }
