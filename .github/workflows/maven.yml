@@ -57,11 +57,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
     - name: Build docker image
-      run: docker build --platform linux/amd64 -f src/main/docker/Dockerfile.jvm .
+      run: docker build --platform linux/amd64 -f src/main/docker/Dockerfile.jvm -t snakegame .
     - name: Displays docker images
       run: docker images
     - name: Tag docker image
-      run: docker tag src/main/docker/Dockerfile.jvm ${{ secrets.DOCKER_USERNAME }}/snake-backend:v1.01
+      run: docker tag snakegame ${{ secrets.DOCKER_USERNAME }}/snake-backend:v1.01
     - name: Push docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/snake-backend:v1.01
 
