@@ -1,6 +1,5 @@
-package org.acme.snakegame.entities;
+package org.polytech.snakegame.entities;
 
-import io.quarkus.logging.Log;
 import io.vertx.core.json.JsonObject;
 
 public class Snake {

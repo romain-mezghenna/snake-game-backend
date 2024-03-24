@@ -1,11 +1,9 @@
-package org.acme.snakegame;
+package org.polytech.snakegame;
 
-import io.quarkus.logging.Log;
 import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
-import org.acme.snakegame.entities.Snake;
+import org.polytech.snakegame.entities.Snake;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -14,10 +12,8 @@ public class SnakeGameEngine {
 
     private static List<Snake> players = new CopyOnWriteArrayList<Snake>();
 
-    private static final int width = 40;
-    private static final int height = 40;
-
-    private static boolean[][] gameBoard = new boolean[width][height];
+    static final int width = 40;
+    static final int height = 40;
 
     // Fill with -1 to indicate that there is no food
     private static int[][] foodBoard = new int[width][height];
@@ -27,18 +23,8 @@ public class SnakeGameEngine {
         // Try to find a random position for the player
         int x = (int) (Math.random() * width);
         int y = (int) (Math.random() * height);
-        boolean found = false;
-        while(!found){
-            if(gameBoard[x][y]){
-                x = (int) (Math.random() * width);
-                y = (int) (Math.random() * height);
-            } else {
-                found = true;
-            }
-        }
         Snake player = new Snake(x, y, username);
         players.add(player);
-        gameBoard[x][y] = true;
         // Add one food to the board
         addFood();
         return player;
@@ -51,7 +37,7 @@ public class SnakeGameEngine {
         // Get a random int from 1 to 7
         int random = (int) (Math.random() * 7) + 1;
         while(!found){
-            if(!gameBoard[x][y]){
+            if(foodBoard[x][y] != -1){
                 foodBoard[x][y] = random;
                 found = true;
             } else {
@@ -77,12 +63,6 @@ public class SnakeGameEngine {
     }
 
     public static void removePlayer(Snake player){
-        // Remove the player from the game board
-        gameBoard[player.getX()][player.getY()] = false;
-        // And its body
-        for(int i = 0; i < player.getScore(); i++){
-            gameBoard[player.getBody()[i][0]][player.getBody()[i][1]] = false;
-        }
         // Remove the food from the board
         removeFood();
         // Remove the player from the list
@@ -108,19 +88,16 @@ public class SnakeGameEngine {
         }
     }
 
-    public static void updateGameBoard(){
-        gameBoard = new boolean[width][height];
-        for(Snake player : players){
-            gameBoard[player.getX()][player.getY()] = true;
-            for(int i = 0; i < player.getScore(); i++){
-                gameBoard[player.getBody()[i][0]][player.getBody()[i][1]] = true;
-            }
+    public static void initGameForTest(){
+        players = new CopyOnWriteArrayList<>();
+        foodBoard = new int[width][height];
+        for (int i = 0; i < width; i++) {
+            Arrays.fill(foodBoard[i], -1);
         }
     }
 
     public static void initGame(){
         players = new CopyOnWriteArrayList<>();
-        gameBoard = new boolean[width][height];
         foodBoard = new int[width][height];
         for (int i = 0; i < width; i++) {
             Arrays.fill(foodBoard[i], -1);
@@ -247,7 +224,7 @@ public class SnakeGameEngine {
         return message;
     }
 
-
-
-
+    public static int[][] getFoodBoard() {
+        return foodBoard;
+    }
 }
