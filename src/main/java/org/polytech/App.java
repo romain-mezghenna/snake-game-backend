@@ -1,4 +1,4 @@
-package org.acme;
+package org.polytech;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -11,6 +11,6 @@ public class App {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
-        return "SISI";
+        return "Welcome to SnakeGame API!";
     }
 }

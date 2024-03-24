@@ -1,4 +1,4 @@
-package org.acme;
+package org.polytech;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ class AppTest {
           .when().get("/hello")
           .then()
              .statusCode(200)
-             .body(is("SISI"));
+             .body(is("Welcome to SnakeGame API!"));
     }
 
 }
