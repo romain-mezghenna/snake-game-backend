@@ -1,0 +1,4 @@
+snake left
+snake up
+snake down
+snake right
