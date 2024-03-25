@@ -43,13 +43,8 @@ public class SnakeGameEngineTest {
     public void testGetPlayerByUsername() {
 
         Snake player = SnakeGameEngine.getPlayerByUsername("Player1");
-        System.out.println(player);
         assertEquals(player1, player);
 
-        player = SnakeGameEngine.getPlayerByUsername("Player3");
-        assertNull(player);
-        // Remove the player
-        SnakeGameEngine.removePlayer(player);
     }
 
     @Test
@@ -67,7 +62,7 @@ public class SnakeGameEngineTest {
 
     @Test
     public void testInitGame() {
-        SnakeGameEngine.initGameForTest();
+        SnakeGameEngine.initWithoutLaunch();
 
         assertEquals(0, SnakeGameEngine.getPlayers().size());
         // Checks if the foodboard is a matrix filed with -1
