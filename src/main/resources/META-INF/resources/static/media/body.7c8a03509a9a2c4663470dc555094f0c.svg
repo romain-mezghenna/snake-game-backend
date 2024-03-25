@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #04fa0f;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="1.16" y=".3" width="16.99" height="18.88"/>
+  <g>
+    <rect class="cls-1" x="17.5" y="0" width="2.5" height="2.5"/>
+    <rect class="cls-1" y="0" width="2.5" height="2.5"/>
+    <rect class="cls-1" x="2.5" y="0" width="2.5" height="2.5"/>
+    <rect class="cls-1" x="5" y="0" width="2.5" height="2.5"/>
+    <rect class="cls-1" x="7.5" y="0" width="2.5" height="2.5"/>
+    <rect class="cls-1" x="10" y="0" width="2.5" height="2.5"/>
+    <rect class="cls-1" x="12.5" y="0" width="2.5" height="2.5"/>
+    <rect class="cls-1" x="15" y="0" width="2.5" height="2.5"/>
+    <g>
+      <rect class="cls-1" x="17.5" y="2.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="17.5" y="5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="17.5" y="7.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="17.5" y="10" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="17.5" y="12.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="17.5" y="15" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="17.5" y="17.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" y="2.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" y="5" width="2.5" height="2.5"/>
+      <rect class="cls-1" y="7.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" y="10" width="2.5" height="2.5"/>
+      <rect class="cls-1" y="12.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" y="15" width="2.5" height="2.5"/>
+      <rect class="cls-1" y="17.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="2.5" y="17.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="5" y="17.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="7.5" y="17.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="10" y="17.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="12.5" y="17.5" width="2.5" height="2.5"/>
+      <rect class="cls-1" x="15" y="17.5" width="2.5" height="2.5"/>
+    </g>
+  </g>
+</svg>

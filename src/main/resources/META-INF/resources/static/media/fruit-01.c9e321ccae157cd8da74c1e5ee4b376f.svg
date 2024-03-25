@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8a0d33;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #b50d33;
+      }
+
+      .cls-3 {
+        fill: #b2e503;
+      }
+
+      .cls-4 {
+        fill: #90b704;
+      }
+
+      .cls-5 {
+        fill: #ff1442;
+      }
+
+      .cls-6 {
+        fill: #005000;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-3" points="10.71 4.3 13.57 4.3 13.57 2.86 15 2.86 15 1.43 12.14 1.43 12.14 2.86 10.71 2.86 10.71 4.3"/>
+  <g>
+    <path class="cls-5" d="M16.43,10h-1.43v-1.43h-4.29v1.43h-1.43v-1.43h-4.29v1.43h-1.43v5.71h1.43v1.43h1.43v1.43h2.86v-1.43h5.71v-1.43h1.43v-5.71Z"/>
+    <rect class="cls-5" x="10.71" y="17.14" width="2.86" height="1.43"/>
+  </g>
+  <rect class="cls-2" x="5" y="11.43" width="1.43" height="2.86"/>
+  <rect class="cls-2" x="6.43" y="14.29" width="1.43" height="1.43"/>
+  <rect class="cls-4" x="12.14" y="2.84" width="1.43" height="1.46" transform="translate(25.71 7.14) rotate(180)"/>
+  <rect class="cls-4" x="13.57" y="1.41" width="1.43" height="1.46" transform="translate(28.57 4.29) rotate(180)"/>
+  <g>
+    <rect class="cls-1" x="5" y="7.14" width="4.29" height="1.43"/>
+    <rect class="cls-1" x="10.71" y="7.14" width="4.29" height="1.43"/>
+    <rect class="cls-1" x="9.29" y="8.57" width="1.43" height="1.43"/>
+    <rect class="cls-1" x="3.57" y="8.57" width="1.43" height="1.43"/>
+    <rect class="cls-1" x="3.57" y="15.71" width="1.43" height="1.43"/>
+    <rect class="cls-1" x="5" y="17.14" width="1.43" height="1.43"/>
+    <rect class="cls-1" x="6.43" y="18.57" width="2.86" height="1.43"/>
+    <rect class="cls-1" x="10.71" y="18.57" width="2.86" height="1.43"/>
+    <rect class="cls-1" x="2.14" y="10" width="1.43" height="5.71"/>
+    <rect class="cls-1" x="15" y="8.57" width="1.43" height="1.43" transform="translate(31.43 18.57) rotate(180)"/>
+    <rect class="cls-6" x="10.71" y="1.43" width="1.43" height="1.43" transform="translate(22.86 4.29) rotate(180)"/>
+    <rect class="cls-6" x="15" y="1.43" width="1.43" height="1.43" transform="translate(31.43 4.29) rotate(180)"/>
+    <rect class="cls-1" x="15" y="15.71" width="1.43" height="1.43" transform="translate(31.43 32.86) rotate(180)"/>
+    <rect class="cls-1" x="13.57" y="17.14" width="1.43" height="1.43" transform="translate(28.57 35.71) rotate(180)"/>
+    <rect class="cls-1" x="9.29" y="17.14" width="1.43" height="1.43" transform="translate(20 35.71) rotate(180)"/>
+    <rect class="cls-1" x="16.43" y="10" width="1.43" height="5.71" transform="translate(34.29 25.71) rotate(180)"/>
+    <polygon class="cls-6" points="10.71 2.84 9.29 2.86 9.29 7.14 10.71 7.12 10.71 2.84"/>
+    <rect class="cls-6" x="12.14" width="4.29" height="1.43" transform="translate(28.57 1.43) rotate(180)"/>
+    <rect class="cls-6" x="13.57" y="2.86" width="1.43" height="1.43" transform="translate(28.57 7.14) rotate(180)"/>
+    <rect class="cls-6" x="10.71" y="4.3" width="2.86" height="1.41" transform="translate(24.29 10.01) rotate(180)"/>
+  </g>
+</svg>

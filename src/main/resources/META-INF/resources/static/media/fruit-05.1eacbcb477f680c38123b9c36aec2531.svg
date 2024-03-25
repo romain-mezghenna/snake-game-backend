@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d8bd3d;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #b2e503;
+      }
+
+      .cls-3 {
+        fill: #b59f2f;
+      }
+
+      .cls-4 {
+        fill: #90b704;
+      }
+
+      .cls-5 {
+        fill: #ffe736;
+      }
+
+      .cls-6 {
+        fill: #005000;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-5" points="3.57 10 3.57 17.14 5 17.14 5 18.57 10.71 18.57 10.71 17.14 13.57 17.14 13.57 15.71 15 15.71 15 8.57 13.57 8.57 13.57 7.14 6.43 7.14 6.43 8.57 5 8.57 5 10 3.57 10"/>
+  <polygon class="cls-2" points="12.14 1.43 12.14 2.86 13.57 2.86 13.57 4.29 15 4.29 15 5.71 16.43 5.71 16.43 2.86 15 2.86 15 1.43 12.14 1.43"/>
+  <rect class="cls-4" x="12.14" y="1.43" width="1.43" height="1.43"/>
+  <rect class="cls-4" x="13.57" y="2.86" width="1.43" height="1.43"/>
+  <rect class="cls-4" x="15" y="4.29" width="1.43" height="1.43"/>
+  <rect class="cls-1" x="5" y="11.43" width="1.43" height="4.29"/>
+  <rect class="cls-1" x="6.43" y="15.71" width="1.43" height="1.43"/>
+  <g>
+    <rect class="cls-3" x="5" y="18.57" width="5.71" height="1.43"/>
+    <rect class="cls-3" x="10.71" y="17.14" width="2.86" height="1.43"/>
+    <rect class="cls-3" x="13.57" y="15.71" width="1.43" height="1.43"/>
+    <rect class="cls-3" x="3.57" y="17.14" width="1.43" height="1.43"/>
+    <rect class="cls-3" x="2.14" y="10" width="1.43" height="7.14"/>
+    <rect class="cls-3" x="15" y="8.57" width="1.43" height="7.14"/>
+    <rect class="cls-6" x="13.57" y="7.14" width="1.43" height="1.43"/>
+    <rect class="cls-6" x="15" y="5.71" width="1.43" height="1.43"/>
+    <rect class="cls-3" x="3.57" y="8.57" width="1.43" height="1.43"/>
+    <rect class="cls-3" x="5" y="7.14" width="1.43" height="1.43"/>
+    <rect class="cls-3" x="6.43" y="5.71" width="7.14" height="1.43"/>
+    <g>
+      <rect class="cls-6" x="15" y="1.43" width="1.43" height="1.43"/>
+      <rect class="cls-6" x="12.14" y="2.86" width="1.43" height="1.43"/>
+      <rect class="cls-6" x="16.43" y="2.86" width="1.43" height="2.86"/>
+      <rect class="cls-6" x="13.57" y="4.29" width="1.43" height="1.43"/>
+    </g>
+    <polygon class="cls-6" points="10.71 0 10.71 1.43 10.71 2.86 12.14 2.86 12.14 1.43 15 1.43 15 0 10.71 0"/>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d36a0f;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #b2e503;
+      }
+
+      .cls-3 {
+        fill: #90b704;
+      }
+
+      .cls-4 {
+        fill: #a1460c;
+      }
+
+      .cls-5 {
+        fill: #ff9a22;
+      }
+
+      .cls-6 {
+        fill: #005000;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-2" points="9.29 4.32 6.43 4.32 6.43 2.88 5 2.88 5 1.43 7.86 1.43 7.86 2.86 9.29 2.86 9.29 4.32"/>
+  <polygon class="cls-5" points="5 10 5 17.14 6.43 17.14 6.43 18.57 13.57 18.57 13.57 17.14 15 17.14 15 10 13.57 10 13.57 8.57 6.43 8.57 6.43 10 5 10"/>
+  <rect class="cls-1" x="6.43" y="11.43" width="1.43" height="4.29"/>
+  <rect class="cls-1" x="7.86" y="15.71" width="1.43" height="1.43"/>
+  <rect class="cls-3" x="6.43" y="2.86" width="1.43" height="1.46"/>
+  <rect class="cls-3" x="5" y="1.39" width="1.43" height="1.46"/>
+  <g>
+    <rect class="cls-4" x="5" y="8.57" width="1.43" height="1.43" transform="translate(11.43 18.57) rotate(180)"/>
+    <rect class="cls-4" x="5" y="17.14" width="1.43" height="1.43" transform="translate(11.43 35.71) rotate(180)"/>
+    <rect class="cls-4" x="13.57" y="17.14" width="1.43" height="1.43" transform="translate(28.57 35.71) rotate(180)"/>
+    <rect class="cls-4" x="13.57" y="8.57" width="1.43" height="1.43" transform="translate(28.57 18.57) rotate(180)"/>
+    <rect class="cls-4" x="3.57" y="10" width="1.43" height="7.14" transform="translate(8.57 27.14) rotate(180)"/>
+    <rect class="cls-4" x="15" y="10" width="1.43" height="7.14" transform="translate(31.43 27.14) rotate(180)"/>
+    <rect class="cls-4" x="9.29" y="4.29" width="1.43" height="7.14" transform="translate(2.14 17.86) rotate(-90)"/>
+    <rect class="cls-4" x="9.29" y="15.71" width="1.43" height="7.14" transform="translate(-9.29 29.29) rotate(-90)"/>
+    <rect class="cls-6" x="7.86" y="1.43" width="1.43" height="1.43"/>
+    <rect class="cls-6" x="3.57" y="1.43" width="1.43" height="1.43"/>
+    <rect class="cls-6" x="6.43" y="4.3" width="2.86" height="1.43"/>
+    <rect class="cls-6" x="9.29" y="2.86" width="1.43" height="4.29" transform="translate(20 10) rotate(180)"/>
+    <rect class="cls-6" x="5" y="2.86" width="1.43" height="1.43"/>
+    <rect class="cls-6" x="3.57" width="4.29" height="1.43"/>
+  </g>
+</svg>
