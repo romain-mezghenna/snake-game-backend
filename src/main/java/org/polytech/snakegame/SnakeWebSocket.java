@@ -94,12 +94,11 @@ public class SnakeWebSocket {
     public static void broadcast(JsonObject message) {
         sessions.values().forEach(s -> {
             try {
-                s.getBasicRemote().sendText(message.toString());
-               /* if(s.isOpen()){
+                if(s.isOpen()){
                     s.getBasicRemote().sendText(message.toString());
                 } else {
                     sessions.values().remove(s);
-                }*/
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
