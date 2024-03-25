@@ -1,4 +1,4 @@
-package org.acme.snakegame;
+package org.polytech.snakegame;
 
 
 import io.quarkus.logging.Log;
@@ -20,9 +20,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class SnakeWebSocket {
 
     // Sessions map to hold all connected clients with their pseudos
-    private static final Map<String, Session> sessions = new ConcurrentHashMap<>();
+    static final Map<String, Session> sessions = new ConcurrentHashMap<>();
 
-    private static boolean initialized = false;
+    static boolean initialized = false;
 
 
     @OnOpen
@@ -53,6 +53,9 @@ public class SnakeWebSocket {
             Log.info("User " + username + " is disconnected");
             sessions.remove(username);
             SnakeGameEngine.removePlayer(SnakeGameEngine.getPlayerByUsername(username));
+            if(SnakeGameEngine.getPlayers().isEmpty()){
+                initialized = false;
+            }
         }
     }
 
@@ -91,12 +94,13 @@ public class SnakeWebSocket {
     public static void broadcast(JsonObject message) {
         sessions.values().forEach(s -> {
             try {
-                if(s.isOpen()){
+                s.getBasicRemote().sendText(message.toString());
+               /* if(s.isOpen()){
                     s.getBasicRemote().sendText(message.toString());
                 } else {
                     sessions.values().remove(s);
-                }
-            } catch (IOException e) {
+                }*/
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         });
